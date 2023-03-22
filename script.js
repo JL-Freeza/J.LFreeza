@@ -12,7 +12,12 @@ function convertToMP3() {
 			if (xhr.readyState == XMLHttpRequest.DONE) {
 				// Display the download link for the MP3 file
 				var output = document.getElementById("output");
-				output.innerHTML = "<a href='" + xhr.responseText + "'>Download MP3</a>";
+				var mp3Url = xhr.responseText;
+if (mp3Url.endsWith(".mp3")) {
+  output.innerHTML = "<a href='" + mp3Url + "'>Download MP3</a>";
+} else {
+  output.innerHTML = "<p>Error converting video to MP3.</p>";
+}
 			}
 		}
 		xhr.send("youtube_url=" + youtubeUrl);
