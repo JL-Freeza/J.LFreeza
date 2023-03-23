@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Password and Business Name Generator</title>
-	 <link rel="stylesheet" type="text/css" href="Generator.css" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Password Generator</h1>
-	<label for="length">Password length:</label>
-	<input type="number" id="length" name="length" value="8" min="4" max="32"><br><br>
-	<button onclick="generatePassword()">Generate Password</button>
-	<p id="password"></p>
-	<script>
-		function generatePassword() {
-			var length = document.getElementById("length").value;
-			var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
-			var password = "";
-			for (var i = 0; i < length; i++) {
-				password += charset.charAt(Math.floor(Math.random() * charset.length));
-			}
-			document.getElementById("password").innerHTML = password;
-		}
-	</script>
+	<div class="container">
+		<h1>Random Generator</h1>
+		<div class="generator">
+			
+		</div>
+		<div class="generator">
+			<h2>Business Name Generator</h2>
+			<label for="subject">Enter a subject for your business:</label>
+			<input type="text" id="subject" name="subject" placeholder="e.g. Technology">
+			<p>Click below to generate a business name:</p>
+			<button id="business-btn" onclick="generateBusinessName()">Generate Business Name</button>
+			<p id="business-name"></p>
+		</div>
+	</div>
 
-	<h1>Business Name Generator</h1>
-	<button onclick="generateName()">Generate Business Name</button>
-	<p id="business-name"></p>
-	<script>
-		function generateName() {
-			var words = ["Pixel", "Innovate", "Venture", "Forge", "Elevate", "Ignite", "Momentum", "Velocity", "Surge", "Incite"];
-			var name = "";
-			for (var i = 0; i < 2; i++) {
-				name += words[Math.floor(Math.random() * words.length)];
-			}
-			document.getElementById("business-name").innerHTML = name;
-		}
-	</script>
+	<script src="generator.js"></script>
 </body>
 </html>
