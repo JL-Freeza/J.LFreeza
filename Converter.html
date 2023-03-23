@@ -2,40 +2,18 @@
 <html>
 <head>
 	<title>YouTube to MP3 Converter</title>
-	<link rel="stylesheet" type="text/css" href="Converter.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="container">
 		<h1>YouTube to MP3 Converter</h1>
 		<input type="text" id="youtube-link" placeholder="Enter YouTube link...">
 		<button id="convert-btn">Convert</button>
-		<audio id="audio-player" controls></audio>
+		<audio id="audio-player" controls download></audio>
 		<div id="error-msg"></div>
 	</div>
 
 	<script src="script.js"></script>
-
-	<script>
-		const convertBtn = document.getElementById('convert-btn');
-		const audioPlayer = document.getElementById('audio-player');
-		const errorMsg = document.getElementById('error-msg');
-
-		convertBtn.addEventListener('click', () => {
-			const youtubeLink = document.getElementById('youtube-link').value.trim();
-			const regex = /^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/;
-
-			if (regex.test(youtubeLink)) {
-				const videoId = youtubeLink.split('v=')[1];
-				const mp3Url = `https://www.convertmp3.io/fetch/?video=https://www.youtube.com/watch?v=${videoId}`;
-				audioPlayer.src = mp3Url;
-				audioPlayer.style.display = 'block';
-				errorMsg.style.display = 'none';
-			} else {
-				errorMsg.textContent = 'Please enter a valid YouTube link.';
-				errorMsg.style.display = 'block';
-				audioPlayer.style.display = 'none';
-			}
-		});
-	</script>
 </body>
 </html>
+
