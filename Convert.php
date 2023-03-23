@@ -1,18 +1,18 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Get the YouTube URL from the POST data
-  $youtubeUrl = $_POST['youtube_url'];
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTube to MP3 Converter</title>
+	<link rel="stylesheet" type="text/css" href="Convert.css">
+</head>
+<body>
+	<div class="container">
+		<h1>YouTube to MP3 Converter</h1>
+		<input type="text" id="youtube-link" placeholder="Enter YouTube link...">
+		<button id="convert-btn">Convert</button>
+		<audio id="audio-player" controls></audio>
+		<div id="error-msg"></div>
+	</div>
 
-  // Use youtube-dl to download the video and extract the audio as an MP3 file
-  $command = "youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s' " . escapeshellarg($youtubeUrl);
-  exec($command);
-
-  // Get the title of the MP3 file
-  $output = shell_exec("ls *.mp3");
-  $title = pathinfo($output, PATHINFO_FILENAME);
-
-  // Return the download URL of the MP3 file
-  $mp3Url = $title . ".mp3";
-  echo $mp3Url;
-}
-?>
+	<script src="script.js"></script>
+</body>
+</html>
