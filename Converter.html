@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>YouTube to MP3 Converter</title>
-	<link rel="stylesheet" type="text/css" href="Converter.css"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="script.js"></script>
-</head>
-<body>
-	<h1>Convert YouTube Video to MP3</h1>
-	<form onsubmit="convertToMP3(); return false;">
-		<label>YouTube URL:</label>
-		<input type="text" id="youtube_url">
-		<input type="submit" value="Convert">
-	</form>
-	<div id="output"></div>
-  
-  <li><a href="index.html">Home </a></li>
+  <head>
+    <title>YouTube to MP3 Converter</title>
+  </head>
+  <body>
+    <h1>Convert YouTube Videos to MP3</h1>
+    <form>
+      <label for="video-link">Enter YouTube video link:</label>
+      <input type="text" id="video-link" name="video-link">
+      <button type="submit">Get Formats</button>
+    </form>
+    <li><a href="index.html">Home </a></li>
    <li><a href="pictures.html ">Pictures </a></li>
    <li><a href="store.html ">Store </a></li>
 	  <li><a href="HunterLawnService.html">Hunter's Lawn Service</a></li>
-</body>
+    
+  </body>
 </html>
