@@ -1,59 +1,50 @@
-Body {
-	background-color:#EEEEEE;
-    font-family: Helvetica,arial, sans-serif;
+* {
+	box-sizing: border-box;
 }
 
-h1,h2,h3 {
-    margin:0;
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-
-#container {
-    Background-color :orange;
-    Width: 1000px;
-Margin-left: 88px;
-Margin-left: 250px;
-
-    }
-    
-
-#header {
-    background-color: purple; 
-    color:white;
-    text-align: center;
-    padding: 10px;
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
 }
 
-#content {
-    padding: 10px;
-
+h1 {
+	margin-top: 0;
 }
 
-#nav{
-width: 180px;
-float: left;
+input[type="text"] {
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ccc;
+	width: 100%;
+	max-width: 400px;
 }
 
-#nav.selected {
-    font-weight: bold;
+button {
+	padding: 10px 20px;
+	background-color: #4286f4;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
-#nav ul {
-list-style-type: none;
-padding: 0;
+#error-msg {
+	color: red;
+	margin-top: 10px;
 }
 
-
-#main {
-
-    width: 600px;
-    float:left
+#audio-player {
+	margin-top: 20px;
+	width: 100%;
 }
 
-#footer {
-    clear:both;
-    padding: 10px;
-    background-color: grey;
-    color:white;
-    text-align: right;
-} 
