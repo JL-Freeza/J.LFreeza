@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password and Business Name Generator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Password Generator</h1>
+	<label for="length">Password length:</label>
+	<input type="number" id="length" name="length" value="8" min="4" max="32"><br><br>
+	<button onclick="generatePassword()">Generate Password</button>
+	<p id="password"></p>
+	<script>
+		function generatePassword() {
+			var length = document.getElementById("length").value;
+			var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+			var password = "";
+			for (var i = 0; i < length; i++) {
+				password += charset.charAt(Math.floor(Math.random() * charset.length));
+			}
+			document.getElementById("password").innerHTML = password;
+		}
+	</script>
+
+	<h1>Business Name Generator</h1>
+	<button onclick="generateName()">Generate Business Name</button>
+	<p id="business-name"></p>
+	<script>
+		function generateName() {
+			var words = ["Pixel", "Innovate", "Venture", "Forge", "Elevate", "Ignite", "Momentum", "Velocity", "Surge", "Incite"];
+			var name = "";
+			for (var i = 0; i < 2; i++) {
+				name += words[Math.floor(Math.random() * words.length)];
+			}
+			document.getElementById("business-name").innerHTML = name;
+		}
+	</script>
+</body>
+</html>
