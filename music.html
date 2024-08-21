@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$antino.com - My Music</title>
-    <link rel="stylesheet" href="music.css"> <!-- Ensure this path is correct -->
+    <title>$antino.com - Music</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
 </head>
 <body>
     <header>
@@ -14,20 +14,12 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pictures.html">Pictures</a></li>
-                <li><a href="store.html">Store</a></li>
-                <!-- Removed Contact link -->
+                <li><a href="music.html">Music</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- Removed Contact link if not needed -->
             </ul>
         </nav>
     </header>
-
-    <section id="home">
-        <div class="home-content">
-            <h2>Listen to all my music :)</h2>
-            <p>Discover the latest music releases and projects by $antino.</p>
-            <button onclick="scrollToSection('music')">Listen Now</button>
-        </div>
-    </section>
 
     <section id="music">
         <div class="music-content">
@@ -46,7 +38,7 @@
                     <img src="music-cover2.jpg" alt="Music Cover 2">
                     <h3>Girl You're On My Mind</h3>
                     <audio controls>
-                        <source src="Girl You're On My Mind.mp3" type="audio/mpeg">
+                        <source src="music2.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -62,24 +54,8 @@
         </div>
     </section>
 
-    <section id="about">
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p>JLfreeza, $antino, Lil Sood.</p>
-            <p>Follow me on Instagram:</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/jlfreeza/" target="_blank">
-                    <img src="Instagram logo.jfif" alt="Instagram" class="social-icon">
-                </a>
-                <!-- Add more Instagram links or other social media links here if needed -->
-            </div>
-        </div>
-    </section>
-
     <footer>
         <p>&copy; 2024 $antino.com. All Rights Reserved.</p>
     </footer>
-
-    <script src="music.js"></script> <!-- Ensure this path is correct -->
 </body>
 </html>
