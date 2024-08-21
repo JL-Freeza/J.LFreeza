@@ -1,44 +1,85 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> J.L Freeza/Music </title>
-<link rel="icon href="J.L freeza3.png" type=img/icon type = "image/x-icon">
-<link rel=stylesheet" type=text/css href="music.css                                                                          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$antino.com - My Music</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1> Music! </h1>
-   <li><a href="index.html">Home </a></li>
-   <li><a href="pictures.html ">Pictures </a></li>
-   <li><a href="store.html ">Store </a></li>
-   </body>
-   
+    <header>
+        <div class="logo">
+            <h1>$antino's Music</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="store.html">Store</a></li>
+                <!-- Removed Contact link -->
+            </ul>
+        </nav>
+    </header>
 
-     <p> <audio controls>
-         <source src="oneknee.mp3" type="audio/mpeg"
-         Your browser does not support the audio element.
-      </audio>
-        </p>                    
-                 
-   
-    <p> <audio controls>
-       <source src="I Miss the Old Crazy.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-       </p>
-         
-    
-    <p> <audio controls>
-       <source src="I miss the old tyler not.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-        </p>
-   
-         <a href="https://soundcloud.com/mariocat-100">
-            <h2><img alt="SoundCloud " </h2>
-               
-               </a>
-          
-            </body>
-   
-   </body>                                 
-   </html>
-   
+    <section id="home">
+        <div class="home-content">
+            <h2>Listen to all my music :)</h2>
+            <p>Discover the latest music releases and projects by $antino.</p>
+            <button onclick="scrollToSection('music')">Listen Now</button>
+        </div>
+    </section>
+
+    <section id="music">
+        <div class="music-content">
+            <h2>My Music</h2>
+            <div class="music-gallery">
+                <!-- Add your music here -->
+                <div class="music-item">
+                    <img src="music-cover1.jpg" alt="Music Cover 1">
+                    <h3>Miss U</h3>
+                    <audio controls>
+                        <source src="music1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="music-item">
+                    <img src="music-cover2.jpg" alt="Music Cover 2">
+                    <h3>Girl You're On My Mind</h3>
+                    <audio controls>
+                        <source src="Girl You're On My Mind.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <!-- Add more music items as needed -->
+            </div>
+
+            <!-- SoundCloud Link Below Music -->
+            <div class="soundcloud-link">
+                <img src="soundcloud-logo.png" alt="SoundCloud" class="soundcloud-logo">
+                <h3>Listen on SoundCloud</h3>
+                <p><a href="https://soundcloud.com/mariocat-100" target="_blank">My SoundCloud Fr</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>JLfreeza, $antino, Lil Sood.</p>
+            <p>Follow me on Instagram</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jlfreeza/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <!-- Add more Instagram links or other social media links here if needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 $antino.com. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
